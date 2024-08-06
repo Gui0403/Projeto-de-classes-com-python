@@ -1,7 +1,9 @@
 from classes import*
+from function import*
 
 def main_menu():
     print('''
+0 - Encerrar Programa
 1 - Criar Cachorro
 2 - Criar Pessoa
 3 - Consultar lista de Cachorros
@@ -24,7 +26,7 @@ def main_menu():
         
 def mostraInformacao_dog():
     nome = input('Digite o nome do Cachorro: ')
-    for dog in Cachorro.lista_cachorros:
+    for dog in lista_cachorros:
         if nome == dog.nome:
             print(f'Nome do Cachorro posição -->{dog.nome}')
             print(f'Raça do Cachorro -->{dog.raca}')
@@ -34,8 +36,8 @@ def mostraInformacao_dog():
         
 
 def mostraInformacao_person():
-    nome = input('Digite o nome do Cachorro: ')
-    for pessoa in Humano.lista_pessoas:
+    nome = input('Digite o nome da Pessoa: ')
+    for pessoa in lista_pessoas:
         if nome == pessoa.nome:
             print(f'Nome da pessoa posição -->{pessoa.nome}')
             print(f'Idade da pessoa -->{pessoa.idade}')
@@ -46,17 +48,12 @@ def mostraInformacao_person():
 
 def listar_dogs():
     num = 1
-    for dog in Cachorro.lista_cachorros:
+    for dog in lista_cachorros:
         print(f'Nome do Cachorro posição {num}°-->{dog.nome}')
         num += 1
-        # print(f'Raça do Cachorro -->{dog.raca}')
-        # print(f'Idade do Cachorro -->{dog.idade}')
-        # print(f'Peso do Cachorro -->{dog.peso}')
-        # print(f'Tamanho do Cachorro -->{dog.tamanho}')
-        
 
 def listar_person():
     num = 1
-    for pessoa in Humano.lista_pessoas:
+    for pessoa in lista_pessoas:
         print(f'Nome da Pessoa posição {num}°-->{pessoa.nome}')
         num += 1

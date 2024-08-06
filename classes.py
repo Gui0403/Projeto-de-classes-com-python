@@ -24,7 +24,6 @@ class Animal:
 class Cachorro(Animal):
     tamanho:float
     raca:str
-    lista_cachorros = []
 
 
     def __init__(self, nome, idade, peso, tamanho, raca):
@@ -41,7 +40,6 @@ class Cachorro(Animal):
 
 class Humano(Animal):
     socializacao:bool
-    lista_pessoas = []
 
     def __init__(self, nome, idade, peso,altura):
         self.coracao = True
@@ -52,4 +50,3 @@ class Humano(Animal):
         self.idade = idade
         self.peso = peso
         self.altura = altura
-
